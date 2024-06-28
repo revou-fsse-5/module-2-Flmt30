@@ -1,0 +1,379 @@
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgba(155, 246, 255, 0.8), 
+    rgba(202, 255, 191, 0.8), 
+    rgba(253, 255, 182, 0.8),
+    rgba(255, 214, 165, 0.8), 
+    rgba(255, 173, 173, 0.8)  
+  );
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+
+.image-container {
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: #FFF;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .profile {
+  text-align: center;
+  padding: 10px;
+}
+
+.sidebar .profile img {
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  padding: 5px;
+}
+
+.sidebar h2 {
+  color: #000;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.sidebar .profile h2 {
+  font-family: 'Yeseva One', cursive;
+}
+
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  transition: transform 0.2s ease; 
+}
+
+.sidebar ul li a:hover {
+  transform: translateX(10px) scale(1.2); 
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #f8f0e6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid #ff69b4;
+  margin: 20px 0;
+}
+
+.mark {
+  background-color: #ffff00;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"],
+.btn {
+  background-color: #ff69b4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+.btn:hover {
+  background-color: #ff1493;
+}
+
+button[type="submit"]:focus,
+.btn:focus {
+  outline: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-posts .post {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-posts .post:hover {
+  transform: scale(1.05);
+}
+
+.blog-posts .post img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.blog-posts .post h3 {
+  margin-top: 10px;
+}
+
+.blog-posts .post .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.blog-posts .post .read-more:hover {
+  background-color: #ff1493;
+}
+
+#testimonial-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 8px;
+}
+
+#testimonial-section h2 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+#testimonial-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+  opacity: 1;
+}
+
+blockquote {
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #ff69b4;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+blockquote p {
+  margin: 0 0 10px;
+}
+
+blockquote footer {
+  text-align: right;
+  font-weight: bold;
+  color: #555;
+}
+
+#prev,
+#next {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: #ff1493;
+}
+
+.footer {
+  background-color:#fafafa; /
+  color: #ffffff; 
+  text-align: center ;
+  padding: 0px;
+  margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar ul {
+      flex-direction: column;
+  }
+
+  .sidebar ul li {
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
